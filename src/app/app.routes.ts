@@ -1,3 +1,24 @@
 import { Routes } from '@angular/router';
+import { AccueilListComponent } from './accueil-list/accueil-list.component';
+import { ErrorComponent } from './error/error.component';
+import { DiversComponent } from './divers/divers.component';
+import { PointageComponent } from './pointage/pointage.component';
+import { HsupastreinteComponent } from './hsupastreinte/hsupastreinte.component';
+import { SaisieAstreinteComponent } from './saisie-astreinte/saisie-astreinte.component';
+import { AgcComponent } from './agc/agc.component';
+import { NgComponent } from './ng/ng.component';
+import { R2nComponent } from './r2n/r2n.component';
+import { ParametresComponent } from './parametres/parametres.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  { path: 'accueil', component: AccueilListComponent },
+  { path: 'divers', component: DiversComponent },
+  { path: 'pointage', component: PointageComponent },
+  { path: 'hsupastreinte', component: HsupastreinteComponent },
+  { path: 'saisie-astreinte', component: SaisieAstreinteComponent },
+  { path: 'agc', component: AgcComponent },
+  { path: 'ng', component: NgComponent },
+  { path: 'r2n', component: R2nComponent },
+  { path: 'parametres', component: ParametresComponent },
+  { path: '', component: ErrorComponent },
+];
