@@ -1,0 +1,121 @@
+
+h1 {
+  text-align: center;
+}
+.principale {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 800px;
+  width: 1900px;
+
+  .superNG {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 20%;
+    margin: 20px;
+    border-radius: 5%;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size:x-large;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid rgb(114, 112, 112);
+    }
+    .NG:hover {
+      border: 3px solid rgb(246, 3, 3);
+    }
+    .ajouter {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 0px;
+    }
+    wcs-button {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: large;
+    }
+  }
+
+  .superAGC {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 20%;
+    margin: 20px;
+    border-radius: 5%;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size:x-large;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid rgb(114, 112, 112);
+    }
+    .AGC:hover {
+      border: 3px solid rgb(246, 3, 3);
+    }
+    .ajouter {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 0px;
+    }
+    wcs-button {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: large;
+    }
+  }
+
+  .superR2N {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 20%;
+    margin: 20px;
+    border-radius: 5%;
+    border: 2px solid black;
+    font-weight: bold;
+    font-size:x-large;
+    a {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 80%;
+      margin: 5px auto;
+      border: 1px solid rgb(114, 112, 112);
+    }
+    .R2N:hover {
+      border: 3px solid rgb(246, 3, 3);
+    }
+    .ajouter {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 0px;
+    }
+    wcs-button {
+      width: 80%;
+      margin: auto;
+      margin-bottom: 15px;
+      font-weight: bold;
+      font-size: large;
+    }
+  }
+
+}

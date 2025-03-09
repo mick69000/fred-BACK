@@ -1,0 +1,119 @@
+body {
+  background-color: rgb(219, 241, 243);
+}
+h1 {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.date {
+  display: flex;
+  flex-direction: row;
+  height: 30%;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+.horaire {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: larger;
+  input{
+    text-align: center;
+    font-weight: 600;
+    font-size: x-large;
+  }
+}
+.label-date {
+  font-family: "avenir-black", sans-serif;
+  font-size: x-large;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.label-heure, .label-astreinte {
+  font-family: "avenir-black", sans-serif;
+  font-size: large;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.toggle {
+  width: 50px;
+  background-color: #dc1d1d;
+}
+.toggle-titre {
+  font-size: 50px;
+  font-weight: bold;
+  width: 150px;
+  color: #dc1d1d;
+}
+.switch {
+  display: flex;
+  justify-content: center;
+
+}
+
+.pavé-milieu {
+  height: 40%;
+
+}
+.label-commentaire {
+  font-family: "avenir-black", sans-serif;
+  text-decoration: underlines;
+  font-size: x-large;
+  font-weight: 700;
+  margin-left: 10%;
+  color: black;
+}
+
+.commentaire {
+  width: 80%;
+  height: 90%;
+  margin-left: 10%;
+}
+.pavé-inférieur {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-evenly;
+  margin-top: 20px;
+  height: 30%;
+  width: 100%;
+}
+.résumé {
+  width: 50%;
+}
+.div-label {
+  height: 15%;
+
+}
+.label-résumé {
+  font-family: "avenir-black", sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  height: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+  color: black;
+}
+.label-astreinte-valeur {
+  margin-left: 5%;
+  font-family: "avenir-book", sans-serif;
+  padding: 2px;
+  border:  thick double #32a1ce;
+  font-size:large;
+}
+.valider {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: 50%;
+  width: 10%;
+}
+.btn-valider {
+  margin-top: 20%;
+
+}
+

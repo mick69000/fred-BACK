@@ -1,0 +1,104 @@
+<h1>Bienvenue sur la page PARAMETRES</h1>
+<wcs-tabs align="center" gutter="true">
+  <wcs-tab header="Engins" item-key="engins">
+    <div class="principale">
+      <div class="superNG">Rames NG
+        <div class="listeEngin">
+          <div class="NG" *ngFor="let engin of engins">
+            <a *ngIf="engin.type === 'NG'">
+              {{ engin.numero }}
+            </a>
+          </div>
+        </div>
+        <div class="ajouter">
+          <wcs-button (click)="ajoutNG.show()">Ajouter une rame NG</wcs-button>
+        </div>
+      </div>
+      <dialog #ajoutNG class="dialog">
+        <div class="titre-modal">Ajout d'une rame NG</div>
+        <label class="label">Entrez le numéro de la rame NG : </label>
+        <input class="imput" type="text">
+        <div>
+          <wcs-button class="boutonAnnuler" (click)="ajoutNG.close()">Annuler
+          </wcs-button>
+          <wcs-button class="boutonAjouter">Ajouter
+          </wcs-button>
+        </div>
+      </dialog>
+
+      <div class="superAGC">Rames AGC
+        <div class="listeEngin">
+          <div class="AGC" *ngFor="let engin of engins">
+            <a *ngIf="engin.type === 'AGC'">
+              {{ engin.numero }}
+            </a>
+          </div>
+        </div>
+        <div class="ajouter">
+          <wcs-button (click)="ajoutAGC.show()">Ajouter une rame AGC</wcs-button>
+        </div>
+      </div>
+      <dialog #ajoutAGC class="dialog">
+        <div class="titre-modal">Ajout d'une rame AGC</div>
+        <label class="label">Entrez le numéro de la rame AGC : </label>
+        <input #numeroRame class="imput" type="text">
+        <div>
+          <wcs-button class="boutonAnnuler" (click)="ajoutAGC.close()">Annuler
+          </wcs-button>
+          <wcs-button class="boutonAjouter" (click)="ajouteUneRame('AGC', numeroRame.value)">Ajouter
+          </wcs-button>
+        </div>
+      </dialog>
+      <div class="superR2N">Rames R2N
+        <div class="listeEngin">
+          <div class="R2N" *ngFor="let engin of engins">
+            <a *ngIf="engin.type === 'R2N'">
+              {{ engin.numero }}
+            </a>
+          </div>
+        </div>
+        <div class="ajouter">
+          <wcs-button (click)="ajoutR2N.show()">Ajouter une rame R2N</wcs-button>
+        </div>
+      </div>
+    </div>
+    <dialog #ajoutR2N class="dialog">
+      <div class="titre-modal">Ajout d'une rame R2N</div>
+      <label class="label">Entrez le numéro de la rame R2N : </label>
+      <input class="imput" type="text">
+      <div>
+        <wcs-button class="boutonAnnuler" (click)="ajoutR2N.close()">Annuler
+        </wcs-button>
+        <wcs-button class="boutonAjouter">Ajouter
+        </wcs-button>
+      </div>
+    </dialog>
+  </wcs-tab>
+  <wcs-tab header="Voies" item-key="voies">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Modules" item-key="modules">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Fiacs" item-key="fiacs">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="OMs" item-key="oms">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Firex" item-key="firex">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="MSU" item-key="msu">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Agents" item-key="agents">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Spécialités" item-key="specialites">
+    Deuxième contenu
+  </wcs-tab>
+  <wcs-tab header="Systèmes" item-key="systemes">
+    Deuxième contenu
+  </wcs-tab>
+</wcs-tabs>

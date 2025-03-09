@@ -1,0 +1,72 @@
+<body>
+  <h1>Bienvenue sur la page Heures SUP / ASTREINTE</h1>
+  <div class="date">
+    <div class="datedebut">
+      <wcs-label class="label-date">Date de début</wcs-label>
+      <wcs-input (ngModelChange)="onDateDebutChange($event)" placeholder="Placeholder" type="date" class="wcs-primary" [(ngModel)]="dateDebut">
+      </wcs-input>
+      <div class="horaire">
+        <input [ngxTimepicker]="toggleTimepickerDebut" [(ngModel)]="heureDebut" [format]="24" [disableClick]="false" readonly>
+        <ngx-material-timepicker-toggle [for]="toggleTimepickerDebut"></ngx-material-timepicker-toggle>
+        <ngx-material-timepicker [minutesGap]="15" (timeChanged)="onTimeDChange($event)" #toggleTimepickerDebut></ngx-material-timepicker>
+      </div>
+      <div class="label-heure">
+        <wcs-label class="label-heure">Heure de début</wcs-label>
+      </div>
+    </div>
+    <div class="datefin">
+      <wcs-label class="label-date">Date de fin</wcs-label>
+
+      <wcs-input (ngModelChange)="onDateFinChange($event)" placeholder="Placeholder" type="date" class="wcs-primary" [(ngModel)]="dateFin" value={{dateDebut}} min={{dateDebut}}>
+      </wcs-input>
+      <div class="horaire">
+        <input [ngxTimepicker]="toggleTimepickerFin" [(ngModel)]="heureFin" [format]="24" [min]="heureMinDynamic" [disableClick]="false" readonly>
+        <ngx-material-timepicker-toggle [for]="toggleTimepickerFin"></ngx-material-timepicker-toggle>
+        <ngx-material-timepicker [minutesGap]="15" (timeChanged)="onTimeFChange($event)" #toggleTimepickerFin></ngx-material-timepicker>
+      </div>
+      <div class="label-heure">
+        <wcs-label class="label-heure">Heure de fin</wcs-label>
+      </div>
+    </div>
+    <div class="toogle">
+      <div>
+        <h1 class="toggle-titre">{{supAstr}}</h1>
+      </div>
+      <div class="switch">
+        <wcs-switch (wcsChange)="categorie()" [(ngModel)]="toggle"></wcs-switch>
+      </div>
+    </div>
+  </div>
+  <div class="pavé-milieu">
+    <wcs-label class="label-commentaire">Commentaire</wcs-label>
+    <wcs-textarea class="commentaire" placeholder="Vous pouvez ajouter un commentaire" rows="15">
+    </wcs-textarea>
+  </div>
+  <div class="pavé-inférieur">
+    <div class="résumé">
+      <div class="div-label">
+        <wcs-label class="label-résumé">Récapitulatif des heures d'astreinte</wcs-label>
+      </div>
+      <div class="div-label">
+        <wcs-label class="label-astreinte">Sur cette page de saisie : </wcs-label>
+        <wcs-label class="label-astreinte-valeur">
+          {{heureSaisie}}
+        </wcs-label>
+        <wcs-label class="label-astreinte">
+          {{plusieurJours}}
+        </wcs-label>
+      </div>
+      <div class="div-label">
+        <wcs-label class="label-astreinte">Depuis le début du mois : </wcs-label>
+        <wcs-label class="label-astreinte-valeur">{{heureDuMois}} </wcs-label>
+      </div>
+      <div class="div-label">
+        <wcs-label class="label-astreinte">Depuis le début d'année : </wcs-label>
+        <wcs-label class="label-astreinte-valeur">{{heureDeLAnnee}}</wcs-label>
+      </div>
+    </div>
+    <div class="valider">
+      <wcs-button class="btn-valider" size="l">Valider</wcs-button>
+    </div>
+  </div>
+</body>
