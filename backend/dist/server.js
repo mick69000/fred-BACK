@@ -1,54 +1,26 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
-const express_1 = __importDefault(require("express"));
-const sqlite3_1 = __importDefault(require("sqlite3"));
-const path_1 = __importDefault(require("path"));
-const cors_1 = __importDefault(require("cors"));
+const tslib_1 = require("tslib");
+const database_1 = require("./config/database");
+const data_routes_1 = tslib_1.__importDefault(require("./routes/data.routes"));
+const express_1 = tslib_1.__importDefault(require("express"));
+const cors_1 = tslib_1.__importDefault(require("cors"));
+const saisie_routes_1 = tslib_1.__importDefault(require("./routes/saisie.routes"));
+console.log('✅ dataRoutes:', data_routes_1.default);
 const app = (0, express_1.default)();
+const PORT = process.env['PORT'] || 3000;
+app.use((0, cors_1.default)({ origin: 'http://localhost:4200' }));
 app.use(express_1.default.json());
-app.use((0, cors_1.default)());
-const db = new sqlite3_1.default.Database(path_1.default.join(__dirname, 'nsz.db'));
-// Créer les tables si elles n'existent pas
-db.serialize(() => {
-    // tables pour les engins avec différents parametres
-    db.run('CREATE TABLE IF NOT EXISTS engins (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS voies (id INTEGER PRIMARY KEY, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS modules (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS fiacs (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS oms (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS firex (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS ms_urgence (id INTEGER PRIMARY KEY, type TEXT, numero TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS agents (id INTEGER PRIMARY KEY, nom TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS specialites (id INTEGER PRIMARY KEY, nom TEXT)');
-    db.run('CREATE TABLE IF NOT EXISTS systemes (id INTEGER PRIMARY KEY, nom TEXT)');
-    // table Heures sup et heures d'astreinte
-    db.run('CREATE TABLE IF NOT EXISTS hsupastreinte (id INTEGER PRIMARY KEY, date_debut TEXT, DATEFIN TEXT, HEUREDEBUT TEXT, HEUREFIN TEXT, NATURE TEXT, COMMENTAIRE TEXT, DUREE TEXT)');
-});
-// Route pour obtenir tous les utilisateurs
-app.get('/api/hsupastreinte', (req, res) => {
-    db.all('SELECT * FROM hsupastreinte', [], (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: err.message });
-            return;
-        }
-        res.json({ hsupastreinte: rows });
+database_1.AppDataSource.initialize()
+    .then(() => {
+    console.log('✅ Base de données connectée !');
+    app.use('/api', data_routes_1.default); // ✅ Monte les routes après la connexion
+    app.use('/api', saisie_routes_1.default); // ✅ Monte les routes après la connexion
+    console.log('✅ Middleware chargés:', data_routes_1.default.stack.map((r) => r.name || 'anonymous'));
+    app.listen(PORT, () => {
+        console.log(`✅ Serveur démarré sur http://localhost:${PORT}`);
     });
-});
-// Route pour obtenir les engins
-app.get('/api/engins', (req, res) => {
-    db.all('SELECT * FROM engins', [], (err, rows) => {
-        if (err) {
-            res.status(500).json({ error: err.message });
-            return;
-        }
-        res.json({ engins: rows });
-    });
-});
-// Démarrer le serveur
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server running on http://localhost:${port}`);
+})
+    .catch((error) => {
+    console.error('❌ Erreur de connexion à la base :', error);
 });
