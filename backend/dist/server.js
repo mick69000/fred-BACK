@@ -6,7 +6,6 @@ const data_routes_1 = tslib_1.__importDefault(require("./routes/data.routes"));
 const express_1 = tslib_1.__importDefault(require("express"));
 const cors_1 = tslib_1.__importDefault(require("cors"));
 const saisie_routes_1 = tslib_1.__importDefault(require("./routes/saisie.routes"));
-console.log('✅ dataRoutes:', data_routes_1.default);
 const app = (0, express_1.default)();
 const PORT = process.env['PORT'] || 3000;
 app.use((0, cors_1.default)({ origin: 'http://localhost:4200' }));

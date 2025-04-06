@@ -25,7 +25,7 @@ export class OmsController {
     try {
       const { type, numero } = req.body;
       if (!type || !numero) {
-        return res.status(400).json({ error: 'Type et numéro sont requis' });
+        res.status(400).json({ error: 'Type et numéro sont requis' });
       }
       const newOm = new Om();
       newOm.type = type;

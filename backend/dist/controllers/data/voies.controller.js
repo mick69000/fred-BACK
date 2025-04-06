@@ -20,7 +20,7 @@ class VoiesController {
         try {
             const { numero } = req.body;
             if (!numero) {
-                return res.status(400).json({ error: 'Un numéro de voie est requis' });
+                res.status(400).json({ error: 'Un numéro de voie est requis' });
             }
             const newVoie = new voie_model_1.Voie();
             newVoie.numero = numero.toUpperCase();
@@ -28,7 +28,7 @@ class VoiesController {
                 numero: newVoie.numero,
             });
             if (existingVoie) {
-                return res.status(409).json({ error: 'Cette voie existe déjà' });
+                res.status(409).json({ error: 'Cette voie existe déjà' });
             }
             await database_1.AppDataSource.manager.save(newVoie);
             console.log("la nouvelle voie a ete enregistrée avec l'ID : ", newVoie.id);

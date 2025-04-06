@@ -24,7 +24,7 @@ class SpecialitesController {
         try {
             const { nom } = req.body;
             if (!nom) {
-                return res.status(400).json({ error: 'Numéro est requis' });
+                res.status(400).json({ error: 'Numéro est requis' });
             }
             const newSpecialite = new specialite_model_1.Specialite();
             newSpecialite.nom = nom.toUpperCase();

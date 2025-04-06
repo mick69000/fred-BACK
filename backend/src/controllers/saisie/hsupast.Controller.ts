@@ -45,9 +45,7 @@ export class HsupastController {
       });
 
       if (existingEngin) {
-        return res
-          .status(409)
-          .json({ error: 'Cette journée est déjà renseignée' });
+        res.status(409).json({ error: 'Cette journée est déjà renseignée' });
       }
 
       await AppDataSource.manager.save(nouvelleJournée);
@@ -67,7 +65,7 @@ export class HsupastController {
     try {
       const { dateDebut } = req.params;
 
-      return await AppDataSource.getRepository(Hsup).findOneBy({
+      await AppDataSource.getRepository(Hsup).findOneBy({
         dateDebut: dateDebut,
       });
     } catch (error) {

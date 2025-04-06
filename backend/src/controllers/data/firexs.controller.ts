@@ -25,7 +25,7 @@ export class FirexsController {
     try {
       const { type, numero } = req.body;
       if (!type || !numero) {
-        return res.status(400).json({ error: 'Type et numéro sont requis' });
+        res.status(400).json({ error: 'Type et numéro sont requis' });
       }
       const newFirex = new Firex();
       newFirex.type = type;

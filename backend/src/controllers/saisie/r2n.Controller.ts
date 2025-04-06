@@ -61,15 +61,15 @@ export class R2Controller {
       nouvelleJournée.mois = journéeAAjouter.mois;
       nouvelleJournée.annee = journéeAAjouter.annee;
 
-      const existingEngin = await AppDataSource.getRepository(R2n).findOneBy({
-        date: nouvelleJournée.date,
-      });
+      // const existingEngin = await AppDataSource.getRepository(R2n).findOneBy({
+      //   date: nouvelleJournée.date,
+      // });
 
-      if (existingEngin) {
-        return res
-          .status(409)
-          .json({ error: 'Cette journée est déjà renseignée' });
-      }
+      // if (existingEngin) {
+      //   return res
+      //     .status(409)
+      //     .json({ error: 'Cette journée est déjà renseignée' });
+      // }
 
       await AppDataSource.manager.save(nouvelleJournée);
       console.log(
@@ -88,7 +88,7 @@ export class R2Controller {
     try {
       const { date } = req.params;
 
-      return await AppDataSource.getRepository(R2n).findOneBy({
+      await AppDataSource.getRepository(R2n).findOneBy({
         date: date,
       });
     } catch (error) {

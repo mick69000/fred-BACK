@@ -25,7 +25,7 @@ export class MsurgentsController {
     try {
       const { type, numero } = req.body;
       if (!type || !numero) {
-        return res.status(400).json({ error: 'Type et numéro sont requis' });
+        res.status(400).json({ error: 'Type et numéro sont requis' });
       }
       const newMsurgent = new Msurgent();
       newMsurgent.type = type;

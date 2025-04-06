@@ -58,14 +58,14 @@ class NgController {
             nouvelleJournée.osmose = journéeAAjouter.osmose;
             nouvelleJournée.mois = journéeAAjouter.mois;
             nouvelleJournée.annee = journéeAAjouter.annee;
-            const existingEngin = await database_1.AppDataSource.getRepository(ng_model_1.Ng).findOneBy({
-                date: nouvelleJournée.date,
-            });
-            if (existingEngin) {
-                return res
-                    .status(409)
-                    .json({ error: 'Cette journée est déjà renseignée' });
-            }
+            // const existingEngin = await AppDataSource.getRepository(Ng).findOneBy({
+            //   date: nouvelleJournée.date,
+            // });
+            // if (existingEngin) {
+            //   return res
+            //     .status(409)
+            //     .json({ error: 'Cette journée est déjà renseignée' });
+            // }
             await database_1.AppDataSource.manager.save(nouvelleJournée);
             console.log("la journée Ng a bien ete enregistrée avec l'ID : ", nouvelleJournée.id);
             res.status(201).json(nouvelleJournée);
@@ -79,7 +79,7 @@ class NgController {
     getADayNg = async (req, res) => {
         try {
             const { date } = req.params;
-            return await database_1.AppDataSource.getRepository(ng_model_1.Ng).findOneBy({
+            await database_1.AppDataSource.getRepository(ng_model_1.Ng).findOneBy({
                 date: date,
             });
         }

@@ -21,6 +21,7 @@ class AgcController {
     };
     // Ajouter un nouvel engin
     addAgc = async (req, res) => {
+        console.log('👉 addAgc() appelée');
         try {
             const journéeAAjouter = req.body;
             const nouvelleJournée = new agc_model_1.Agc();
@@ -58,14 +59,14 @@ class AgcController {
             nouvelleJournée.osmose = journéeAAjouter.osmose;
             nouvelleJournée.mois = journéeAAjouter.mois;
             nouvelleJournée.annee = journéeAAjouter.annee;
-            const existingEngin = await database_1.AppDataSource.getRepository(agc_model_1.Agc).findOneBy({
-                date: nouvelleJournée.date,
-            });
-            if (existingEngin) {
-                return res
-                    .status(409)
-                    .json({ error: 'Cette journée est déjà renseignée' });
-            }
+            // const existingEngin = await AppDataSource.getRepository(Agc).findOneBy({
+            //   date: nouvelleJournée.date,
+            // });
+            // if (existingEngin) {
+            //   return res
+            //     .status(409)
+            //     .json({ error: 'Cette journée est déjà renseignée' });
+            // }
             await database_1.AppDataSource.manager.save(nouvelleJournée);
             console.log("la journée Agc a bien ete enregistrée avec l'ID : ", nouvelleJournée.id);
             res.status(201).json(nouvelleJournée);
@@ -79,7 +80,7 @@ class AgcController {
     getADayAgc = async (req, res) => {
         try {
             const { date } = req.params;
-            return await database_1.AppDataSource.getRepository(agc_model_1.Agc).findOneBy({
+            await database_1.AppDataSource.getRepository(agc_model_1.Agc).findOneBy({
                 date: date,
             });
         }

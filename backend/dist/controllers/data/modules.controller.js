@@ -24,7 +24,7 @@ class ModulesController {
         try {
             const { type, numero } = req.body;
             if (!type || !numero) {
-                return res.status(400).json({ error: 'Type et numéro sont requis' });
+                res.status(400).json({ error: 'Type et numéro sont requis' });
             }
             const newModule = new module_model_1.Module();
             newModule.type = type;

@@ -22,6 +22,7 @@ export class AgcController {
 
   // Ajouter un nouvel engin
   addAgc = async (req: Request, res: Response) => {
+    console.log('👉 addAgc() appelée');
     try {
       const journéeAAjouter = req.body;
       const nouvelleJournée = new Agc();
@@ -60,15 +61,15 @@ export class AgcController {
       nouvelleJournée.mois = journéeAAjouter.mois;
       nouvelleJournée.annee = journéeAAjouter.annee;
 
-      const existingEngin = await AppDataSource.getRepository(Agc).findOneBy({
-        date: nouvelleJournée.date,
-      });
+      // const existingEngin = await AppDataSource.getRepository(Agc).findOneBy({
+      //   date: nouvelleJournée.date,
+      // });
 
-      if (existingEngin) {
-        return res
-          .status(409)
-          .json({ error: 'Cette journée est déjà renseignée' });
-      }
+      // if (existingEngin) {
+      //   return res
+      //     .status(409)
+      //     .json({ error: 'Cette journée est déjà renseignée' });
+      // }
 
       await AppDataSource.manager.save(nouvelleJournée);
       console.log(
@@ -87,7 +88,7 @@ export class AgcController {
     try {
       const { date } = req.params;
 
-      return await AppDataSource.getRepository(Agc).findOneBy({
+      await AppDataSource.getRepository(Agc).findOneBy({
         date: date,
       });
     } catch (error) {

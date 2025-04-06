@@ -25,7 +25,7 @@ export class EnginsController {
     try {
       const { type, numero } = req.body;
       if (!type || !numero) {
-        return res.status(400).json({ error: 'Type et numéro sont requis' });
+        res.status(400).json({ error: 'Type et numéro sont requis' });
       }
       const newEngin = new Engin();
       newEngin.type = type;
@@ -37,7 +37,7 @@ export class EnginsController {
       });
 
       if (existingEngin) {
-        return res.status(409).json({ error: 'Cet engin existe déjà' });
+        res.status(409).json({ error: 'Cet engin existe déjà' });
       }
 
       await AppDataSource.manager.save(newEngin);

@@ -182,6 +182,5 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Number)
 ], Ng.prototype, "annee", void 0);
 exports.Ng = Ng = tslib_1.__decorate([
-    (0, typeorm_1.Entity)(),
-    (0, typeorm_1.Unique)(['date'])
+    (0, typeorm_1.Entity)()
 ], Ng);

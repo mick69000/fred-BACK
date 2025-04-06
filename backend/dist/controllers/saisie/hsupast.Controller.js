@@ -41,9 +41,7 @@ class HsupastController {
                 dateDebut: nouvelleJournée.dateDebut,
             });
             if (existingEngin) {
-                return res
-                    .status(409)
-                    .json({ error: 'Cette journée est déjà renseignée' });
+                res.status(409).json({ error: 'Cette journée est déjà renseignée' });
             }
             await database_1.AppDataSource.manager.save(nouvelleJournée);
             console.log("les Hsup ont bien ete enregistrés avec l'ID : ", nouvelleJournée.id);
@@ -58,7 +56,7 @@ class HsupastController {
     getADayHsup = async (req, res) => {
         try {
             const { dateDebut } = req.params;
-            return await database_1.AppDataSource.getRepository(hsup_model_1.Hsup).findOneBy({
+            await database_1.AppDataSource.getRepository(hsup_model_1.Hsup).findOneBy({
                 dateDebut: dateDebut,
             });
         }

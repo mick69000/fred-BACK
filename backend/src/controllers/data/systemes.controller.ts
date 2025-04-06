@@ -25,7 +25,7 @@ export class SystemesController {
     try {
       const { nom } = req.body;
       if (!nom) {
-        return res.status(400).json({ error: 'Nom est requis' });
+        res.status(400).json({ error: 'Nom est requis' });
       }
       const newSysteme = new Systeme();
       newSysteme.nom = nom.toUpperCase();

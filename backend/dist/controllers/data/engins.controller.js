@@ -24,7 +24,7 @@ class EnginsController {
         try {
             const { type, numero } = req.body;
             if (!type || !numero) {
-                return res.status(400).json({ error: 'Type et numéro sont requis' });
+                res.status(400).json({ error: 'Type et numéro sont requis' });
             }
             const newEngin = new engin_model_1.Engin();
             newEngin.type = type;
@@ -34,7 +34,7 @@ class EnginsController {
                 numero: newEngin.numero,
             });
             if (existingEngin) {
-                return res.status(409).json({ error: 'Cet engin existe déjà' });
+                res.status(409).json({ error: 'Cet engin existe déjà' });
             }
             await database_1.AppDataSource.manager.save(newEngin);
             console.log("le nouveau engin a ete enregistré avec l'ID : ", newEngin.id);

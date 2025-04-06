@@ -182,6 +182,5 @@ tslib_1.__decorate([
     tslib_1.__metadata("design:type", Number)
 ], R2n.prototype, "annee", void 0);
 exports.R2n = R2n = tslib_1.__decorate([
-    (0, typeorm_1.Entity)(),
-    (0, typeorm_1.Unique)(['date'])
+    (0, typeorm_1.Entity)()
 ], R2n);

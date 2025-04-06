@@ -11,7 +11,6 @@ const msurgents_controller_1 = require("../controllers/data/msurgents.controller
 const oms_controller_1 = require("../controllers/data/oms.controller");
 const specialites_controller_1 = require("../controllers/data/specialites.controller");
 const systemes_controller_1 = require("../controllers/data/systemes.controller");
-console.log('📌 data.routes.ts est exécuté !');
 const router = (0, express_1.Router)();
 const enginController = new engins_controller_1.EnginsController();
 const voieController = new voies_controller_1.VoiesController();

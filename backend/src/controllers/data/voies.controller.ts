@@ -20,7 +20,7 @@ export class VoiesController {
     try {
       const { numero } = req.body;
       if (!numero) {
-        return res.status(400).json({ error: 'Un numéro de voie est requis' });
+        res.status(400).json({ error: 'Un numéro de voie est requis' });
       }
       const newVoie = new Voie();
       newVoie.numero = numero.toUpperCase();
@@ -30,7 +30,7 @@ export class VoiesController {
       });
 
       if (existingVoie) {
-        return res.status(409).json({ error: 'Cette voie existe déjà' });
+        res.status(409).json({ error: 'Cette voie existe déjà' });
       }
 
       await AppDataSource.manager.save(newVoie);

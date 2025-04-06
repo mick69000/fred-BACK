@@ -24,7 +24,7 @@ class AgentsController {
         try {
             const { nom, prenom } = req.body;
             if (!nom || !prenom) {
-                return res.status(400).json({ error: 'Nom et Prenom sont requis' });
+                res.status(400).json({ error: 'Nom et Prenom sont requis' });
             }
             const newAgent = new agent_model_1.Agent();
             newAgent.nom = nom.toUpperCase();
@@ -35,7 +35,7 @@ class AgentsController {
                 prenom: newAgent.prenom,
             });
             if (existingAgent) {
-                return res.status(409).json({ error: 'Cet agent existe déjà' });
+                res.status(409).json({ error: 'Cet agent existe déjà' });
             }
             await database_1.AppDataSource.manager.save(newAgent);
             console.log("le nouvel agent a ete enregistré avec l'ID : ", newAgent.id);

@@ -7,7 +7,6 @@ import {
 } from 'typeorm';
 
 @Entity()
-@Unique(['date'])
 export class Ng extends BaseEntity {
   @PrimaryGeneratedColumn()
   id!: number;
