@@ -84,12 +84,6 @@ export class R2n extends BaseEntity {
   jour4!: string;
 
   @Column()
-  depannage!: boolean;
-
-  @Column()
-  pointage!: boolean;
-
-  @Column()
   en_cours!: boolean;
 
   @Column()

@@ -31,8 +31,6 @@ let Ng = class Ng extends typeorm_1.BaseEntity {
     jour2;
     jour3;
     jour4;
-    depannage;
-    pointage;
     en_cours;
     valide;
     dsmat;
@@ -149,14 +147,6 @@ tslib_1.__decorate([
     (0, typeorm_1.Column)(),
     tslib_1.__metadata("design:type", String)
 ], Ng.prototype, "jour4", void 0);
-tslib_1.__decorate([
-    (0, typeorm_1.Column)(),
-    tslib_1.__metadata("design:type", Boolean)
-], Ng.prototype, "depannage", void 0);
-tslib_1.__decorate([
-    (0, typeorm_1.Column)(),
-    tslib_1.__metadata("design:type", Boolean)
-], Ng.prototype, "pointage", void 0);
 tslib_1.__decorate([
     (0, typeorm_1.Column)(),
     tslib_1.__metadata("design:type", Boolean)

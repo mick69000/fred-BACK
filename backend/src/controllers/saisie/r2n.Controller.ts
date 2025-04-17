@@ -52,24 +52,12 @@ export class R2Controller {
       nouvelleJournée.jour2 = journéeAAjouter.jour2;
       nouvelleJournée.jour3 = journéeAAjouter.jour3;
       nouvelleJournée.jour4 = journéeAAjouter.jour4;
-      nouvelleJournée.depannage = journéeAAjouter.depannage;
-      nouvelleJournée.pointage = journéeAAjouter.pointage;
       nouvelleJournée.en_cours = journéeAAjouter.en_cours;
       nouvelleJournée.valide = journéeAAjouter.valide;
       nouvelleJournée.dsmat = journéeAAjouter.dsmat;
       nouvelleJournée.osmose = journéeAAjouter.osmose;
       nouvelleJournée.mois = journéeAAjouter.mois;
       nouvelleJournée.annee = journéeAAjouter.annee;
-
-      // const existingEngin = await AppDataSource.getRepository(R2n).findOneBy({
-      //   date: nouvelleJournée.date,
-      // });
-
-      // if (existingEngin) {
-      //   return res
-      //     .status(409)
-      //     .json({ error: 'Cette journée est déjà renseignée' });
-      // }
 
       await AppDataSource.manager.save(nouvelleJournée);
       console.log(

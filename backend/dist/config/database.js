@@ -17,6 +17,7 @@ const hsup_model_1 = require("../models/saisie/hsup.model");
 const agc_model_1 = require("../models/saisie/agc.model");
 const ng_model_1 = require("../models/saisie/ng.model");
 const r2n_model_1 = require("../models/saisie/r2n.model");
+const notePerso_model_1 = require("../models/saisie/notePerso.model");
 exports.AppDataSource = new typeorm_1.DataSource({
     type: 'sqlite',
     database: 'nsz.db',
@@ -35,6 +36,7 @@ exports.AppDataSource = new typeorm_1.DataSource({
         agc_model_1.Agc,
         ng_model_1.Ng,
         r2n_model_1.R2n,
+        notePerso_model_1.NotePerso,
     ],
     synchronize: true, // Synchronisation des entités avec la base de données (pas recommandé en production)
     logging: true,

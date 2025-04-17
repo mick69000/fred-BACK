@@ -31,8 +31,6 @@ let Agc = class Agc extends typeorm_1.BaseEntity {
     jour2;
     jour3;
     jour4;
-    depannage;
-    pointage;
     en_cours;
     valide;
     dsmat;
@@ -149,14 +147,6 @@ tslib_1.__decorate([
     (0, typeorm_1.Column)(),
     tslib_1.__metadata("design:type", String)
 ], Agc.prototype, "jour4", void 0);
-tslib_1.__decorate([
-    (0, typeorm_1.Column)(),
-    tslib_1.__metadata("design:type", Boolean)
-], Agc.prototype, "depannage", void 0);
-tslib_1.__decorate([
-    (0, typeorm_1.Column)(),
-    tslib_1.__metadata("design:type", Boolean)
-], Agc.prototype, "pointage", void 0);
 tslib_1.__decorate([
     (0, typeorm_1.Column)(),
     tslib_1.__metadata("design:type", Boolean)

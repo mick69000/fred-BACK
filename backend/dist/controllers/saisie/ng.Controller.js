@@ -50,22 +50,12 @@ class NgController {
             nouvelleJournée.jour2 = journéeAAjouter.jour2;
             nouvelleJournée.jour3 = journéeAAjouter.jour3;
             nouvelleJournée.jour4 = journéeAAjouter.jour4;
-            nouvelleJournée.depannage = journéeAAjouter.depannage;
-            nouvelleJournée.pointage = journéeAAjouter.pointage;
             nouvelleJournée.en_cours = journéeAAjouter.en_cours;
             nouvelleJournée.valide = journéeAAjouter.valide;
             nouvelleJournée.dsmat = journéeAAjouter.dsmat;
             nouvelleJournée.osmose = journéeAAjouter.osmose;
             nouvelleJournée.mois = journéeAAjouter.mois;
             nouvelleJournée.annee = journéeAAjouter.annee;
-            // const existingEngin = await AppDataSource.getRepository(Ng).findOneBy({
-            //   date: nouvelleJournée.date,
-            // });
-            // if (existingEngin) {
-            //   return res
-            //     .status(409)
-            //     .json({ error: 'Cette journée est déjà renseignée' });
-            // }
             await database_1.AppDataSource.manager.save(nouvelleJournée);
             console.log("la journée Ng a bien ete enregistrée avec l'ID : ", nouvelleJournée.id);
             res.status(201).json(nouvelleJournée);
