@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import { AppDataSource } from '../../config/database';
 import { Hsup } from './../../models/saisie/hsup.model';
 import { JournéeAAjouter } from '../../journéeAAjouter';
+import { log } from 'console';
 
 export class HsupastController {
   constructor() {
@@ -32,7 +33,7 @@ export class HsupastController {
       nouvelleJournée.moisDebut = journéeAAjouter.moisDebut;
       nouvelleJournée.dateFin = journéeAAjouter.dateFin;
       nouvelleJournée.heureFin = journéeAAjouter.heureFin;
-      nouvelleJournée.astreinte = journéeAAjouter.ast;
+      nouvelleJournée.astreinte = journéeAAjouter.astreinte;
       nouvelleJournée.hsup = journéeAAjouter.hsup;
       nouvelleJournée.cadeau = journéeAAjouter.cadeau;
       nouvelleJournée.commentaire = journéeAAjouter.commentaire;
@@ -40,11 +41,16 @@ export class HsupastController {
       nouvelleJournée.heureDuMois = journéeAAjouter.heureDuMois;
       nouvelleJournée.heureDeLAnnee = journéeAAjouter.heureDeLAnnee;
 
-      const existingEngin = await AppDataSource.getRepository(Hsup).findOneBy({
+      console.log(
+        'Clés reçues dans journéeAAjouter :',
+        Object.keys(req.body.journéeAAjouter)
+      );
+
+      const existingHSup = await AppDataSource.getRepository(Hsup).findOneBy({
         dateDebut: nouvelleJournée.dateDebut,
       });
 
-      if (existingEngin) {
+      if (existingHSup) {
         res.status(409).json({ error: 'Cette journée est déjà renseignée' });
       }
 

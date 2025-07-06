@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-grid-custom-cell.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst GridCustomCell = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n    this.columnId = undefined;\n    this.rowId = undefined;\n  }\n  render() {\n    return h(Host, {\n      key: 'ff6029ca87066fa7fe87dc269c067cd128a41d21',\n      slot: this.columnId + '-' + this.rowId\n    }, h(\"slot\", {\n      key: '6469540fb6399ab03af6c9dcb6442bede62c9845'\n    }));\n  }\n};\nexport { GridCustomCell as wcs_grid_custom_cell };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,iBAAiB,MAAM;AAAA,EAC3B,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAC9B,SAAK,WAAW;AAChB,SAAK,QAAQ;AAAA,EACf;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM,KAAK,WAAW,MAAM,KAAK;AAAA,IACnC,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;",
+  "names": []
+}

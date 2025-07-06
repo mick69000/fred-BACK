@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/button-interface-dc5ddd51.js"],
+  "sourcesContent": ["const WcsButtonSizeValues = ['s', 'm', 'l']; // as const keyword is used to infer and preserve the exact literal values of an array or object.\nfunction isWcsButtonSize(size) {\n  // @ts-ignore : ignore size type, as it is checked with WcsButtonSizeValues\n  return WcsButtonSizeValues.includes(size);\n}\nexport { WcsButtonSizeValues as W, isWcsButtonSize as i };\n\n"],
+  "mappings": ";AAAA,IAAM,sBAAsB,CAAC,KAAK,KAAK,GAAG;AAC1C,SAAS,gBAAgB,MAAM;AAE7B,SAAO,oBAAoB,SAAS,IAAI;AAC1C;",
+  "names": []
+}

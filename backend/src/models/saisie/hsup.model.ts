@@ -39,7 +39,7 @@ export class Hsup extends BaseEntity {
   @Column()
   cadeau!: boolean;
 
-  @Column()
+  @Column({ nullable: true })
   commentaire!: string;
 
   @Column()

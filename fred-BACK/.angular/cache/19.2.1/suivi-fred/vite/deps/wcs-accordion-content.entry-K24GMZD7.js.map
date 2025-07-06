@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-accordion-content.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst accordionContentCss = \":host{--wcs-accordion-content-padding:var(--wcs-semantic-spacing-base) calc(3 * var(--wcs-semantic-spacing-base)) var(--wcs-semantic-spacing-large) calc(3 * var(--wcs-semantic-spacing-base));--wcs-accordion-content-text-color:var(--wcs-semantic-color-text-secondary);padding:var(--wcs-accordion-content-padding);color:var(--wcs-accordion-content-text-color);display:block}\";\nconst WcsAccordionContentStyle0 = accordionContentCss;\nconst AccordionContent = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: '1ffd81bb25e74b291b7cc403531fbc712f931aab',\n      slot: \"content\"\n    }, h(\"slot\", {\n      key: 'a33fafee2fbe3cf7470c38f43d6d396fbf7fd9ea'\n    }));\n  }\n};\nAccordionContent.style = WcsAccordionContentStyle0;\nexport { AccordionContent as wcs_accordion_content };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,sBAAsB;AAC5B,IAAM,4BAA4B;AAClC,IAAM,mBAAmB,MAAM;AAAA,EAC7B,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;AACA,iBAAiB,QAAQ;",
+  "names": []
+}

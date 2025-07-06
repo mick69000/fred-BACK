@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-hint.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst hintCss = \":host{--wcs-hint-font-size-default:var(--wcs-semantic-font-size-caption-2);--wcs-hint-font-size-small:var(--wcs-semantic-font-size-caption-3);--wcs-hint-font-weight:var(--wcs-semantic-font-weight-book);--wcs-hint-color:var(--wcs-semantic-color-text-secondary);font-size:var(--wcs-hint-font-size-default);font-weight:var(--wcs-hint-font-weight);color:var(--wcs-hint-color)}:host([small]){font-size:var(--wcs-hint-font-size-small);font-weight:var(--wcs-hint-font-weight)}\";\nconst WcsHintStyle0 = hintCss;\nconst Hint = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n    this.small = false;\n  }\n  render() {\n    return h(Host, {\n      key: 'e143c56dcc628774eecfc09ce5d0151703cffa89',\n      slot: \"messages\"\n    }, h(\"slot\", {\n      key: 'da1cf4e019f6dd0416402a77abd360806c5892e4'\n    }));\n  }\n};\nHint.style = WcsHintStyle0;\nexport { Hint as wcs_hint };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,UAAU;AAChB,IAAM,gBAAgB;AACtB,IAAM,OAAO,MAAM;AAAA,EACjB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAC9B,SAAK,QAAQ;AAAA,EACf;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;AACA,KAAK,QAAQ;",
+  "names": []
+}

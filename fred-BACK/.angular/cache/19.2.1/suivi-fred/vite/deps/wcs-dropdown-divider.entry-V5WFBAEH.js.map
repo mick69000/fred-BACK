@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-dropdown-divider.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst dropdownDividerCss = \":host{--wcs-dropdown-divider-margin:var(--wcs-semantic-spacing-base) 0;--wcs-dropdown-divider-color:var(--wcs-semantic-color-border-secondary);display:block;margin:var(--wcs-dropdown-divider-margin);overflow:hidden;border-top:1px solid var(--wcs-dropdown-divider-color)}\";\nconst WcsDropdownDividerStyle0 = dropdownDividerCss;\nconst DropdownDivider = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: '81d4f1fbc372b6905c0abfa9ab2e17da62e66bb7',\n      slot: \"item\",\n      tabindex: \"-1\",\n      \"aria-hidden\": \"true\"\n    });\n  }\n};\nDropdownDivider.style = WcsDropdownDividerStyle0;\nexport { DropdownDivider as wcs_dropdown_divider };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,qBAAqB;AAC3B,IAAM,2BAA2B;AACjC,IAAM,kBAAkB,MAAM;AAAA,EAC5B,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,MACN,UAAU;AAAA,MACV,eAAe;AAAA,IACjB,CAAC;AAAA,EACH;AACF;AACA,gBAAgB,QAAQ;",
+  "names": []
+}

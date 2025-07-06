@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/breadcrumb-constants-5d525e22.js"],
+  "sourcesContent": ["const NAV_ARIA_LABEL_DEFAULT = 'Fil d\\'Ariane';\nconst EXPAND_BTN_ARIA_LABEL_DEFAULT = 'Étendre le fil d\\'Ariane';\nconst ICONS_FONT_CHEVRON_UNICODE = '\\uF107';\nexport { EXPAND_BTN_ARIA_LABEL_DEFAULT as E, ICONS_FONT_CHEVRON_UNICODE as I, NAV_ARIA_LABEL_DEFAULT as N };\n\n"],
+  "mappings": ";AAAA,IAAM,yBAAyB;AAC/B,IAAM,gCAAgC;AACtC,IAAM,6BAA6B;",
+  "names": []
+}

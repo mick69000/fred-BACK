@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-field-label.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst FieldLabel = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: '4ec0eb745e24f80408c9e28d178875ea1d37c66e',\n      slot: \"label\"\n    }, h(\"slot\", {\n      key: '9baea00992b41058ccbe8e1f44d0938e0f1aeaae'\n    }));\n  }\n};\nexport { FieldLabel as wcs_field_label };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,aAAa,MAAM;AAAA,EACvB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;",
+  "names": []
+}

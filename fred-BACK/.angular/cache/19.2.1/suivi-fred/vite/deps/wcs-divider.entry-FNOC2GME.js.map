@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-divider.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst dividerCss = \":host{--wcs-divider-color:var(--wcs-semantic-color-border-secondary);--wcs-divider-height:var(--wcs-semantic-border-width-default);display:block;border-bottom:solid var(--wcs-divider-height) var(--wcs-divider-color)}\";\nconst WcsDividerStyle0 = dividerCss;\nconst Divider = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: '19525963d8b8e0153b9644369ca44959cea01efa'\n    });\n  }\n};\nDivider.style = WcsDividerStyle0;\nexport { Divider as wcs_divider };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,aAAa;AACnB,IAAM,mBAAmB;AACzB,IAAM,UAAU,MAAM;AAAA,EACpB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,IACP,CAAC;AAAA,EACH;AACF;AACA,QAAQ,QAAQ;",
+  "names": []
+}

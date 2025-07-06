@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-accordion-header.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst accordionHeaderCss = \":host{text-align:left}\";\nconst WcsAccordionHeaderStyle0 = accordionHeaderCss;\nconst AccordionHeader = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: 'd78fe9badfb9ba04ce4b29a518dcc724a2bbf15c',\n      slot: \"header\"\n    }, h(\"slot\", {\n      key: '90b5fa5315499ac17957b8f366696ff05ad7a3c0'\n    }));\n  }\n};\nAccordionHeader.style = WcsAccordionHeaderStyle0;\nexport { AccordionHeader as wcs_accordion_header };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,qBAAqB;AAC3B,IAAM,2BAA2B;AACjC,IAAM,kBAAkB,MAAM;AAAA,EAC5B,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;AACA,gBAAgB,QAAQ;",
+  "names": []
+}

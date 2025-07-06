@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/mutable-aria-attribute-e225edc1.js"],
+  "sourcesContent": ["function isMutableAriaAttribute(el) {\n  if (typeof el !== 'object' || el === null || el === undefined) return false;\n  return 'setAriaAttribute' in el;\n}\nexport { isMutableAriaAttribute as i };\n\n"],
+  "mappings": ";AAAA,SAAS,uBAAuB,IAAI;AAClC,MAAI,OAAO,OAAO,YAAY,OAAO,QAAQ,OAAO,OAAW,QAAO;AACtE,SAAO,sBAAsB;AAC/B;",
+  "names": []
+}

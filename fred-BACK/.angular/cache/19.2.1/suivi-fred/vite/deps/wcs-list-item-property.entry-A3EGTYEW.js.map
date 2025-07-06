@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-list-item-property.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst listItemPropertyCss = \":host{--wcs-list-item-property-font-weight:var(--wcs-semantic-font-weight-medium);--wcs-list-item-property-color:var(--wcs-semantic-color-text-secondary);font-weight:var(--wcs-list-item-property-font-weight);color:var(--wcs-list-item-property-color)}\";\nconst WcsListItemPropertyStyle0 = listItemPropertyCss;\nconst ListItemProperty = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: 'd3a0ac60b5dab19f4af6600c5e50614f5b2f9172',\n      slot: \"property\"\n    }, h(\"slot\", {\n      key: '4d3e992526dd4ada152af855495a89630627efbe'\n    }));\n  }\n};\nListItemProperty.style = WcsListItemPropertyStyle0;\nexport { ListItemProperty as wcs_list_item_property };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,sBAAsB;AAC5B,IAAM,4BAA4B;AAClC,IAAM,mBAAmB,MAAM;AAAA,EAC7B,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;AACA,iBAAiB,QAAQ;",
+  "names": []
+}

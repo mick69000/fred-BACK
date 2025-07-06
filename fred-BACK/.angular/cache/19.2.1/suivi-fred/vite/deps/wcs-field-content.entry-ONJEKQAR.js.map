@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-field-content.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h, H as Host } from './index-d9de61ce.js';\nconst FieldContent = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(Host, {\n      key: '90046cecd6e01ef9425879a47216ff4180d70526',\n      slot: \"content\"\n    }, h(\"slot\", {\n      key: '9b658ba9f8b688f5738d7181a9c6c0bcddd9aa82'\n    }));\n  }\n};\nexport { FieldContent as wcs_field_content };\n\n"],
+  "mappings": ";;;;;;;;AACA,IAAM,eAAe,MAAM;AAAA,EACzB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;",
+  "names": []
+}

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-tab.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, c as createEvent, h, H as Host } from './index-d9de61ce.js';\nconst tabCss = \":host{display:block}:host([hidden]){display:none}\";\nconst WcsTabStyle0 = tabCss;\nconst Tab = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n    this.tabLoaded = createEvent(this, \"tabLoaded\", 7);\n    this.header = undefined;\n    this.itemKey = undefined;\n  }\n  componentDidLoad() {\n    this.tabLoaded.emit();\n  }\n  render() {\n    return h(Host, {\n      key: '805ddbb0eafcce267e7f102f8d7c19712d5b04be',\n      slot: \"wcs-tab\",\n      role: \"tabpanel\"\n    }, h(\"slot\", {\n      key: 'ec2afee10cefdf575df100582e769e3bf93d2412'\n    }));\n  }\n};\nTab.style = WcsTabStyle0;\nexport { Tab as wcs_tab };\n\n"],
+  "mappings": ";;;;;;;;;AACA,IAAM,SAAS;AACf,IAAM,eAAe;AACrB,IAAM,MAAM,MAAM;AAAA,EAChB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAC9B,SAAK,YAAY,YAAY,MAAM,aAAa,CAAC;AACjD,SAAK,SAAS;AACd,SAAK,UAAU;AAAA,EACjB;AAAA,EACA,mBAAmB;AACjB,SAAK,UAAU,KAAK;AAAA,EACtB;AAAA,EACA,SAAS;AACP,WAAO,EAAE,MAAM;AAAA,MACb,KAAK;AAAA,MACL,MAAM;AAAA,MACN,MAAM;AAAA,IACR,GAAG,EAAE,QAAQ;AAAA,MACX,KAAK;AAAA,IACP,CAAC,CAAC;AAAA,EACJ;AACF;AACA,IAAI,QAAQ;",
+  "names": []
+}

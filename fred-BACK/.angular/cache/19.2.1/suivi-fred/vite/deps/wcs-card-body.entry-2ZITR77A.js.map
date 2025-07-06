@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../../../node_modules/wcs-core/dist/esm/wcs-card-body.entry.js"],
+  "sourcesContent": ["import { r as registerInstance, h } from './index-d9de61ce.js';\nconst cardBodyCss = \":host{--wcs-card-body-padding:var(--wcs-semantic-spacing-large);flex:1 1 auto;padding:var(--wcs-card-body-padding)}\";\nconst WcsCardBodyStyle0 = cardBodyCss;\nconst CardBody = class {\n  constructor(hostRef) {\n    registerInstance(this, hostRef);\n  }\n  render() {\n    return h(\"slot\", {\n      key: '4f5691663c5f43df79027a4fe7d09659c216a8e4'\n    });\n  }\n};\nCardBody.style = WcsCardBodyStyle0;\nexport { CardBody as wcs_card_body };\n\n"],
+  "mappings": ";;;;;;;AACA,IAAM,cAAc;AACpB,IAAM,oBAAoB;AAC1B,IAAM,WAAW,MAAM;AAAA,EACrB,YAAY,SAAS;AACnB,qBAAiB,MAAM,OAAO;AAAA,EAChC;AAAA,EACA,SAAS;AACP,WAAO,EAAE,QAAQ;AAAA,MACf,KAAK;AAAA,IACP,CAAC;AAAA,EACH;AACF;AACA,SAAS,QAAQ;",
+  "names": []
+}
