@@ -65,7 +65,7 @@ export class NotePersoController {
   }
 
   // Supprime ue note perso
-  deleteNotesPerso = async (req: Request, res: Response) => {
+  deleteNotesPerso = async (req: Request, res: Response): Promise<void> => {
     try {
       const journee = req.params['journee'];
       const numero = req.params['numero'];
@@ -81,9 +81,7 @@ export class NotePersoController {
       });
 
       if (result.affected === 0) {
-        return res
-          .status(404)
-          .json({ message: 'Aucune note trouvée à supprimer' });
+        res.status(404).json({ message: 'Aucune note trouvée à supprimer' });
       }
       // 2. Récupérer les notes avec un numéro supérieur
       const notesAShift = await AppDataSource.getRepository(NotePerso).find({

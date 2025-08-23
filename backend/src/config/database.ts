@@ -15,6 +15,7 @@ import { Agc } from '../models/saisie/agc.model';
 import { Ng } from '../models/saisie/ng.model';
 import { R2n } from '../models/saisie/r2n.model';
 import { NotePerso } from '../models/saisie/notePerso.model';
+import { Semaine } from '../models/saisie/semaine.model';
 
 export const AppDataSource = new DataSource({
   type: 'sqlite',
@@ -35,6 +36,7 @@ export const AppDataSource = new DataSource({
     Ng,
     R2n,
     NotePerso,
+    Semaine,
   ],
   synchronize: true, // Synchronisation des entités avec la base de données (pas recommandé en production)
   logging: true,

@@ -4,6 +4,7 @@ import { AgcController } from '../controllers/saisie/agc.Controller';
 import { NgController } from '../controllers/saisie/ng.Controller';
 import { R2Controller } from '../controllers/saisie/r2n.Controller';
 import { NotePersoController } from '../controllers/saisie/notePerso.Controller';
+import { SemaineController } from '../controllers/saisie/semaine.Controller';
 
 const router = Router();
 const hsupController = new HsupastController();
@@ -11,6 +12,7 @@ const agcController = new AgcController();
 const ngController = new NgController();
 const r2nController = new R2Controller();
 const notePersoController = new NotePersoController();
+const semaineControler = new SemaineController();
 
 router.get('/hsupast', hsupController.getAllHsup);
 router.get('/hsupast/:journee', hsupController.getADayHsup);
@@ -45,5 +47,10 @@ router.delete(
   '/noteperso/:journee/:numero',
   notePersoController.deleteNotesPerso
 );
+
+router.get('/semaines', semaineControler.getAllSemaines);
+router.post('/semaines', semaineControler.addSemaines);
+router.put('/semaines', semaineControler.updateSemaines);
+router.delete('/semaines/:annee', semaineControler.deleteSemaines);
 
 export default router;
