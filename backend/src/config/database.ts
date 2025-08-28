@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import { DataSource } from 'typeorm';
 import { Agent } from '../models/data/agent.model';
+import { Dirigeant } from '../models/data/dirigeant.model';
 import { Engin } from '../models/data/engin.model';
 import { Fiac } from '../models/data/fiac.model';
 import { Firex } from '../models/data/firex.model';
@@ -22,6 +23,7 @@ export const AppDataSource = new DataSource({
   database: 'nsz.db',
   entities: [
     Agent,
+    Dirigeant,
     Engin,
     Fiac,
     Firex,

@@ -9,6 +9,7 @@ import { MsurgentsController } from '../controllers/data/msurgents.controller';
 import { OmsController } from '../controllers/data/oms.controller';
 import { SpecialitesController } from '../controllers/data/specialites.controller';
 import { SystemesController } from '../controllers/data/systemes.controller';
+import { DirigeantsController } from '../controllers/data/dirigeants.controller';
 
 const router = Router();
 const enginController = new EnginsController();
@@ -21,10 +22,15 @@ const msurgentController = new MsurgentsController();
 const omController = new OmsController();
 const specialiteController = new SpecialitesController();
 const systemeController = new SystemesController();
+const dirigeantController = new DirigeantsController();
 
 router.get('/agents', agentController.getAllAgents);
 router.post('/agents', agentController.addAgent);
 router.delete('/agents/:nom/:prenom', agentController.deleteAgent);
+
+router.get('/dirigeants', dirigeantController.getAllDirigeants);
+router.post('/dirigeants', dirigeantController.addDirigeant);
+router.delete('/dirigeants/:nom/:prenom', dirigeantController.deleteDirigeant);
 
 router.get('/engins', enginController.getAllEngins);
 router.post('/engins', enginController.addEngin);
